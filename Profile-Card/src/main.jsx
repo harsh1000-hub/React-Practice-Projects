@@ -118,7 +118,15 @@ function Skill({ skillObj }) {
 
     <div className="skill" style={{ backgroundColor: skillObj.color }}>
       <span>{skillObj.skill}</span>
-      {/* apply conditional rendering to give emoji according to level of skill */}
+
+      {/* apply conditional rendering using && */}
+      {/* <span>
+        {skillObj.level === "advanced" && "💪"}
+        {skillObj.level === "intermediate" && "💪"}
+        {skillObj.level === "beginner" && "😯"}
+      </span> */}
+
+      {/* apply conditional rendering to give emoji according to level of skill using ternary operator*/}
       {skillObj.level === "advanced" ? (
         <span>💪</span>
       ) : skillObj.level === "intermediate" ? (
